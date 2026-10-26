@@ -27,17 +27,43 @@
 
 ---
 
-### 2. Lab 2.1: Xử Lý Dữ Liệu Khuyết Thiếu Trong Pandas (Missing Data)
+### 2. Lab 2: Làm Việc Với Dữ Liệu Bị Thiếu Trong Thư Viện Pandas (Missing Data)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/Lab2_1_XuLyDuLieuKhuyetThieu_MissingData.ipynb)
 
 * **Tập tin notebook:** [Lab2_1_XuLyDuLieuKhuyetThieu_MissingData.ipynb](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/Lab2_1_XuLyDuLieuKhuyetThieu_MissingData.ipynb)
 * **Tài liệu đề bài:** `Lab 2_1 Missing Data.pdf`
 * **Tập dữ liệu thực tế:** [employees.csv](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/employees.csv) (1000 dòng, 8 thuộc tính)
 * **Nội dung thực hiện:**
-  - **Lý thuyết:** Phân loại 3 cơ chế khuyết thiếu: MCAR (hoàn toàn ngẫu nhiên), MAR (ngẫu nhiên có điều kiện), MNAR (không ngẫu nhiên).
-  - **Mục 1:** Phát hiện dữ liệu thiếu trong DataFrame bằng `isnull()` và thống kê số lượng NaN.
+  - **Lý thuyết:** Giữ nguyên bản định nghĩa Missing Data, nguyên nhân và 3 loại khuyết thiếu: MCAR, MAR, MNAR.
+  - **Mục 1:** Phát hiện dữ liệu thiếu trong DataFrame bằng `df.isnull()`.
   - **Mục 2:** Làm việc với tập dữ liệu thực tế `employees.csv`, lọc các bản ghi có `Gender = NaN` (145 bản ghi).
   - **Mục 3.1 (`fillna`):** Điền giá trị hằng số (`0`) và điền giá trị liền trước (`method='pad'`).
-  - **Mục 3.2 (`replace`):** Thay thế giá trị NaN bằng giá trị đại diện quy ước (`-88`).
-  - **Mục 3.3 (`interpolate`):** Nội suy tuyến tính đa biến (`method='linear'`) lấp đầy khoảng trống dữ liệu một cách mượt mà và tự nhiên.
-  - **Đánh giá & So sánh:** Tổng hợp bảng ưu nhược điểm của các phương pháp xử lý dữ liệu khuyết thiếu trong phân tích dữ liệu lớn.
+  - **Mục 3.2 (`replace`):** Thay thế giá trị NaN bằng giá trị quy ước (`-88`).
+  - **Mục 3.3 (`interpolate`):** Sử dụng hàm interpolate() để điền các giá trị còn thiếu bằng phương pháp tuyến tính (`linear`).
+
+---
+
+### 3. Lab 3: Làm Sạch Dữ Liệu (Data Cleaning)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/Lab3_Clearning_Data.ipynb)
+
+* **Tập tin notebook:** [Lab3_Clearning_Data.ipynb](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/Lab3_Clearning_Data.ipynb)
+* **Tài liệu đề bài:** `Lab 3_Clearning Data.pdf`
+* **Tập dữ liệu thực hành & bài tập:**
+  - [data.csv](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/data.csv) (dữ liệu nhân viên, địa chỉ thực hành phần II)
+  - [property_data.csv](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi2-KhaiPhaVaXulyDuLieu/property_data.csv) (dữ liệu bất động sản bài tập phần III)
+* **Nội dung thực hiện:**
+  - **Lý thuyết:** Giữ nguyên bản nội dung lý thuyết và các thao tác làm sạch dữ liệu của Thầy.
+  - **Phần II - Thực hành:**
+    - Lấy dữ liệu dataset từ Google Drive / GitHub.
+    - Viết thường (`lower`), viết hoa (`upper`), viết hoa chữ cái đầu (`title`) tên các cột.
+    - Thay thế khoảng trắng bằng dấu gạch dưới `_` trong tên cột.
+    - Đổi tên cột (`rename`), gán tên cột theo vị trí index (`columns.values`).
+    - Lọc cột loại trừ (`!=`, `~isin`), lọc cột theo từ khóa (`filter(like=...)`), ký tự kết thúc (`endswith`, `regex`).
+    - Chọn một nhóm tên cột theo chỉ mục slice.
+  - **Phần III - Bài tập:**
+    - 2.1: Đọc tệp `property_data.csv` vào DataFrame, xử lý các định dạng missing `["n/a", "na", "--"]`.
+    - 2.2: Tìm trong DataFrame những dữ liệu bị thiếu (`isnull`).
+    - 2.3: Xem cột `NUM_BEDROOMS` và tìm những giá trị `NaN`.
+    - 2.4: Tính tổng số giá trị còn thiếu trong toàn bộ DataFrame (10 giá trị).
+    - 2.5: Điền giá trị `126` vào ô bị thiếu trong cột `ST_NUM`.
+    - 2.6: Thay thế missing values trong cột `NUM_BEDROOMS` bằng giá trị trung vị (`median = 2.5`).
