@@ -1,0 +1,3 @@
+Storage_Format,File_Size_MB,Write_Time_s,Aggregation_Query_s
+JSON Lines (Raw),90.33,8.82,9.624
+Apache Parquet (Snappy),8.46,1.45,0.342

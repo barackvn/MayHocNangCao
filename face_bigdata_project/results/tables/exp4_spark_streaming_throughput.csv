@@ -1,0 +1,6 @@
+Num_Cameras,Input_Events_Per_Sec,Processed_Events_Per_Sec,MicroBatch_Duration_s,P95_EndToEnd_Latency_s,Consumer_Lag
+10,100,100,0.18,0.43,0
+50,500,500,0.32,0.68,0
+100,1000,1000,0.48,1.0,0
+250,2500,2500,0.92,2.1,0
+500,5000,5000,1.71,3.57,0
