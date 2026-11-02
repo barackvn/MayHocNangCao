@@ -20,7 +20,7 @@
 
 * **Tập tin notebook:** [Lab3_1_HoiQuyTuyenTinhDonGian.ipynb](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi3-Phan%20Tich%20Du%20lieu%20v%C3%A0%20Cac%20Phuong%20Phap%20hoc%20co%20giam%20s%C3%A1t/Lab3_1_HoiQuyTuyenTinhDonGian.ipynb) *(hoặc alias [LAB-3.1.ipynb](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi3-Phan%20Tich%20Du%20lieu%20v%C3%A0%20Cac%20Phuong%20Phap%20hoc%20co%20giam%20s%C3%A1t/LAB-3.1.ipynb))*
 * **Tài liệu đề bài:** `LAB-3.1.pdf`
-* **Tập dữ liệu thực tế:** [Salary_Data.csv](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi3-Phan%20Tich%20Du%20lieu%20v%C3%A0%20Cac%20Phuong%20Phap%20hoc%20co%20giam%20s%C3%A1t/Salary_Data.csv) (30 bản ghi gồm `YearsExperience` và `Salary`)
+* **Tập dữ liệu thực tế:** [Salary_Data.csv](https://github.com/barackvn/MayHocNangCao/blob/main/Buoi3-Phan%20Tich%20Du%20lieu%20v%C3%A0%20Cac%20Phuong%20Phap%20hoc%20co%20giam%20s%C3%A1t/Salary_Data.csv) (Nguồn Kaggle: [Salary_data.csv - Kaggle Dataset](https://www.kaggle.com/datasets/ravitejakotharu/salary-datacsv) - 30 bản ghi gồm `YearsExperience` và `Salary`)
 * **Nội dung thực hiện chi tiết:**
   - **Lý thuyết:**
     - Định nghĩa phương pháp Hồi quy tuyến tính đơn giản (*Simple Linear Regression*).
