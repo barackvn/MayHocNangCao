@@ -46,3 +46,4 @@
   - **III – Bài tập mở rộng:**
     - Áp dụng toàn bộ quy trình tiền xử lý văn bản NLP trên tài liệu PDF bài giảng thực tế: `Copy of Slide 2 GFS and Hadoop.pdf`.
     - Thống kê tần số phân phối từ vựng (`FreqDist`) và vẽ biểu đồ cột Top 15 từ khóa xuất hiện nhiều nhất sau khi đã loại bỏ từ dừng.
+
